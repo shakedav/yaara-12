@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>נחש את הסלב</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        h1 {
+            color: #ffffff
+        }
+        .container {
+            background: #000000;
+            width: 100%;
+            height: 100%;
+        }
+        input {
+            width: 100px;
+            height: 100px;
+            font-size: 100px;
+            padding: 0px 0 20px 0;   
+            text-align: center;     
+        }
+    </style>
+    <script>
+        $(document).ready(function(){            
+            $("#guess").click(function(){
+                let name='';
+                $("input").each(function () {
+                    name = name.concat($(this).val())
+                })
+                if (name == 'איתילוי') {
+                    $("#blur").hide();
+                    $("#clear").show();
+                }
+                console.log(name)
+            });
+        });
+    </script>
+</head>
+<body dir="rtl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>נחש את הסלב</h1>
+                <p>
+                    <img id="blur" src="./איתי לוי מטושטש.jpg" alt="איתי לוי מטושטש" width="50%" height="50%">
+                    <img id="clear" hidden src="./איתי לוי.jpeg" alt="איתי לוי" width="50%" height="50%">
+                </p>
+                <p>    
+                    <input maxlength="1" />
+                    <input maxlength="1" />
+                    <input maxlength="1" />
+                    <input maxlength="1" />
+                    <input maxlength="1" />
+                    <input maxlength="1" />
+                    <input maxlength="1" />
+                </p>
+                <p>
+                    <button id="guess">נחש מי!</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
